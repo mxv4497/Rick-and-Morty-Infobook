@@ -24,13 +24,12 @@ struct CustomButtonPicker: View {
 
     var body: some View {
         
-        VStack{
+        VStack(spacing: 64){
             HStack {
                 // by having this hstack with a spacer inside, the background color is spread throughout the view as opposed to not hoving it
                 Spacer()
             }
-            
-            Spacer()
+        
             Spacer()
             
             Button(action: {
@@ -40,7 +39,7 @@ struct CustomButtonPicker: View {
             })
             .buttonStyle(MyButtonStyle(color: Color.skyBlue))
             
-            Spacer()
+            //Spacer()
             
             Button(action: {
                 selection = 2
@@ -49,7 +48,7 @@ struct CustomButtonPicker: View {
             })
             .buttonStyle(MyButtonStyle(color: Color.rose))
             
-            Spacer()
+            //Spacer()
             
             Button(action: {
                 selection = 3
@@ -58,7 +57,14 @@ struct CustomButtonPicker: View {
             })
             .buttonStyle(MyButtonStyle(color: Color.lime))
             
-            Spacer()
+            //Spacer()
+            
+            Button(action: {
+                selection = 4
+            }, label: {
+                Label("Favorite", systemImage: "star.fill")
+            })
+            .buttonStyle(MyButtonStyle(color: Color.lime))
             Spacer()
             
         }.background(LinearGradient(
