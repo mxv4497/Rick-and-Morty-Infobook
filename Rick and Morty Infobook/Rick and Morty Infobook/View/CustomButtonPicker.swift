@@ -64,7 +64,7 @@ struct CustomButtonPicker: View {
             }, label: {
                 Label("Favorite", systemImage: "star.fill")
             })
-            .buttonStyle(MyButtonStyle(color: Color.lime))
+            .buttonStyle(MyButtonStyle(color: Color.purple))
             Spacer()
             
         }.background(LinearGradient(
