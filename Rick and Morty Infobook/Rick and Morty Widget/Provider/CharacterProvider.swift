@@ -26,7 +26,7 @@ struct CharacterProvider: TimelineProvider {
                     var entries: [Entry] = []
                     var entryDate = Date()
                     
-                    if let nextUpdate = Calendar.current.date(byAdding: .second, value: 1, to: entryDate) {
+                    if let nextUpdate = Calendar.current.date(byAdding: .minute, value: 5, to: entryDate) {
                         entryDate = nextUpdate
                         entries.append(CharacterEntry(date: nextUpdate, character: char))
                     }
